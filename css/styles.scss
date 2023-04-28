@@ -1,0 +1,462 @@
+$bg-dark: #000000;
+$gold: #BDAE82;
+$white: #FFFFFF;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg-dark;
+}
+
+.header {
+    background-image: url(images/bg.png);
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+@mixin flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin margin {
+    margin-top: 100px;
+}
+
+@mixin padding {
+    padding: 0px 8px;
+}
+
+@mixin color {
+    color: white;
+}
+
+
+.nav-bar {
+    @include flexbox;
+    color: white;
+    padding: 20px 20px;
+}
+
+.nav-img {
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.3);
+        transition: 0.5s
+    }
+}
+
+
+
+.nav-link {
+    @include padding;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    color: #BDAE82;
+    transition: 0.5s
+}
+
+
+.header-logo {
+    @include color;
+    padding: 140px 80px;
+}
+
+.header-title {
+    font-size: 52px;
+}
+
+.header-text {
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.header-button {
+    background-color: #BDAE82;
+    height: 40px;
+    width: 150px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+
+.header-button:hover {
+    transform: scale(1.4);
+    transition: 0.5s;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center
+}
+
+.lntxt {
+    overflow: hidden
+}
+
+.lntxt:before, 
+.lntxt:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 18%;
+    height: 2px;
+    background: #BDAE82;
+    //   border:solid #FFF;
+    border-width: 0 .5em 0;
+}
+
+.lntxt:before {
+    margin-left: -100%
+}
+
+.lntxt:after {
+    margin-right: -100%
+}
+
+// .lntxt:before{margin-left: -50%;}
+// .lntxt:after {margin-right: -50%;}
+
+.skills-block {
+    @include margin
+}
+
+.skills-info {
+    @include color;
+    margin-top: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.skills-text-title {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.portfolio-block {
+    @include margin;
+}
+
+.portfolio-seasons {
+    @include color;
+    display: flex;
+    justify-content: center;
+}
+
+.season-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.season {
+    display: flex;
+    color: #BDAE82;
+    border: 2px solid #BDAE82;
+    height: 45px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.season-a {
+    background-color: #BDAE82;
+    color: black;
+    display: flex;
+    border: 2px solid #BDAE82;
+    height: 45px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 3px;
+    cursor: pointer;
+}
+
+.season:hover{
+    background-color: #BDAE82;
+    color: black;
+    transition: 0.5s;
+}
+
+.seasons-img-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+
+.seasons-img {
+    margin: 10px 10px;  
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.seasons-img:hover {
+    transform: scale(1.1);
+    transition: 0.5s
+}
+
+.video-block {
+    @include margin;
+}
+
+.video {
+    background-image: url(images/video-player.png);
+    border-radius: 10px;
+    background-size: cover;
+    height: 100vh;
+    margin: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+.play-hover {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.play-hover:hover {
+    transform: scale(1.4);
+    transition: 0.5s;
+}
+
+.price-block {
+    @include margin;
+}
+
+.price-info {
+    @include color;
+    border: 3px solid #BDAE82;
+    width: 450px;
+    height: 380px;
+    text-align: center;
+    margin: 20px 20px; 
+    padding: 20px 0px;
+}
+
+.button-price {
+    background-color: #BDAE82;
+    width: 150px;
+    height: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+
+.button-price:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.price-info-block {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.contact {
+    background-image: url(images/photo_5350683323103562982_y.jpg);
+    // background-size: 100%;
+    height: 100vh;
+    // padding-right: 180px;
+    padding-top: 40px;
+    margin-top: 80px;
+    background-repeat: no-repeat;
+}
+
+.contact-button {
+    background-color: #BDAE82;
+    width: 150px;
+    height: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+    margin-right: 190px;
+}
+
+.contact-button:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.contact-form {
+    text-align: end;
+}
+
+.input-contact {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #BDAE82;
+    border-radius: 0px;
+    height: 35px;
+    width: 300px;
+    padding: 0px 10px;
+    margin: 10px 20px;
+    color: white;
+}
+
+.textarea-contact {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #BDAE82;
+    border-radius: 0px;
+    padding: 5px 10px;
+    margin: 10px 20px;
+    width: 300px;
+    color: white;
+}
+
+.contact-me {
+    padding-right: 190px;
+}
+
+::placeholder {
+    color: #BDAE82;
+}
+
+.footer {
+    @include color;
+    margin: 40px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-git {
+    padding: 0px 10px;
+}
+
+.img-footer {
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.img-footer:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+.burger-menu {
+    @media screen and (min-width: 768px) {
+       display: none; 
+        }
+    }
+    @media screen and (max-width: 768px) {
+    .nav-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .skills-info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skills-infos {
+        width: 300px;
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .seasons-img-block {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .portfolio-seasons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 60px 0px;
+    }
+    .season, .season-a {
+        margin: 3px 3px;
+    }
+    .seasons-img-block {
+        justify-content: center;
+    }
+    .season-info {
+        margin-top: 60px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .video{
+        margin: 60px 0px;
+    }
+
+    .play-hover {
+        width: 60px;
+        // padding-bottom: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .price-info-block {
+        flex-direction: column;
+    }
+    .price-info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-top: 0px;
+        height: 63vh;
+        background-position: left;
+    }
+    .contact-form {
+        text-align: center;
+    }
+    .contact-me {
+        padding-right: 0px;
+    }
+
+    .contact-button {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        line-height: 50px;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .price-info {
+        width: 300px;
+    }
+    .video{
+        background-position: 25%;
+    }
+}
+
+
+
